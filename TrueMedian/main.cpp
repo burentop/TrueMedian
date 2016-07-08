@@ -15,5 +15,11 @@ int main()
         temps.push_back(temp);
     
     sort(temps);
-    cout << "Median temperature: " <<temps[temps.size()/2.0] << "\n";
+    if (temps.size() % 2 == 0) {
+        double temp1 = temps[int (temps.size() / 2)];
+        double temp2 = temps[int ((temps.size() / 2) - 1)];
+        cout << "Median temperature: " << (temp1 + temp2) / 2.0 << "\n";
+    } else {
+        cout << "Median temperature: " << temps[temps.size()/2.0] << "\n";
+    }
 }
