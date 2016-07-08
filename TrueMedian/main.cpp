@@ -6,10 +6,14 @@
 //  Copyright © 2016 Brent Perry. All rights reserved.
 //
 
-#include <iostream>
+#include "../../../std_lib_facilities.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+    vector<double> temps;
+    for (double temp; cin >> temp;)
+        temps.push_back(temp);
+    
+    sort(temps);
+    cout << "Median temperature: " <<temps[temps.size()/2.0] << "\n";
 }
